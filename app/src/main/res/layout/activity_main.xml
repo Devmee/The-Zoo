@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="150dp"
+        android:text="@string/S_Lname"
+        android:textColor="#333A40"
+        android:textColorHint="#9E922B"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/S_LoginB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="162dp"
+        android:text="@string/S_LButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S_Lp" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/GoogleB"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="149dp"
+        android:backgroundTint="#F83939"
+        android:text="@string/S_LGoogleButton"
+        android:textAllCaps="false"
+        android:textColor="#EADDDD"
+        android:textStyle="bold"
+        app:icon="@drawable/google_glass_logo"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/S_FB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.47"
+        tools:visibility="visible" />
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/S_FB"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="149dp"
+        android:backgroundTint="#1C5AB8"
+        android:text="@string/S_LFbButton"
+        android:textAllCaps="false"
+        android:textColor="#F8F3F3"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/GoogleB"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.47"
+        tools:visibility="visible"
+        app:icon="@drawable/facebook_circular_logo"
+
+        app:iconTint="@color/black"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="58dp"
+        android:text="@string/S_Ldnt_have"
+        app:layout_constraintBottom_toTopOf="@+id/GoogleB"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S_LoginB" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="58dp"
+        android:text="@string/S_LsignUP"
+        android:textColor="#FF0909"
+        app:layout_constraintBottom_toTopOf="@+id/S_FB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/S_Lp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/S_Uname"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:startIconDrawable="@drawable/ic_rp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/S_Uname2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/S_LEmailAddrss" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/S_Lp"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S_Uname"
+        app:startIconDrawable="@drawable/ic_pw">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/S_Lp2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/S_Lpassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/S_Fog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="135dp"
+        android:text="@string/S_Lfgpassword"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/S_Lp"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

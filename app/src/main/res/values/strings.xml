@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">ZooApp</string>
+
+    <string name="S_Lname">Login</string>
+    <string name="S_LEmailAddrss">Username</string>
+    <string name="S_Lpassword">Password</string>
+    <string name="S_Lfgpassword">Forgot Password?</string>
+    <string name="S_LButton">LOGIN</string>
+    <string name="S_Ldnt_have">Dont have an Account?</string>
+    <string name="S_LsignUP">Sign Up</string>
+    <string name="S_LGoogleButton">Google</string>
+    <string name="S_LFbButton">Facebook</string>
+
+    <string name="S_Rname">Registration</string>
+    <string name="S_EmailAddrss">Username</string>
+    <string name="S_REmailAddrss">Email</string>
+    <string name="S_RcontactNum">Contact Number</string>
+    <string name="S_Emailddrss">Username</string>
+    <string name="S_Rpassword">Password</string>
+    <string name="S_RCpassword">Confirm Password</string>
+    <string name="S_RgButton">Register</string>
+
+    <string name="S_Userpname">User Name</string>
+    <string name="S_UserPEmailAddrss">Email</string>
+    <string name="S_UserContact">Contact Number</string>
+    <string name="S_UserLogout">Logout</string>
+
+    <string name="S_HTButton">Book Your Ticket</string>
+    <string name="S_Hlink1"><u>Your Previous Ticket booking </u> </string>
+    <string name="S_HAButton">Animal Feeding</string>
+    <string name="S_Hlink2"><u>Your booking Information</u></string>
+    <string name="S_HASButton">Animal Show</string>
+    <string name="S_Hlink3"><u>Your Show Details</u></string>
+    <string name="S_HGButton">Guided Tour</string>
+    <string name="S_Hlink4"><u>Your Tour Information</u></string>
+
+
+    <string name="S_TicketBname">Book Your Ticket</string>
+    <string-array name="Nationality">
+        <item> Local</item>
+        <item> Foreign</item>
+    </string-array>
+    <string name="S_TNational">Nationality</string>
+    <string name="S_TAdult">Adult (Over 15)</string>
+    <string name="S_TChild">Child (5 -15)</string>
+    <string name="S_TDate">08/04/2021</string>
+    <string name="S_TBook">Book Now</string>
+
+    <string name="S_TDname">Booking Details</string>
+    <string name="S_TDcancelButton">Cancel Booking</string>
+
+
+
+----------------------------------------------------------------------
+
+
+    <string name="B_AnameButton">Aquarium Show</string>
+    <string name="B_BnameButton">Bird Show</string>
+
+    <string name="B_Aqname">Aquarium Show</string>
+    <string name="B_AnimalType">Animal Type</string>
+    <string name="B_Seat">Number Of Seats</string>
+    <string name="B_Showtime">Show Time</string>
+    <string name="B_Date">08/04/2021</string>
+    <string name="B_ADate">Select Date</string>
+    <string name="B_BookButton">Book</string>
+
+    <string name="B_Birdname">Bird Show</string>
+    <string name="B_BSeat">Number Of Seats</string>
+    <string name="B_BShowtime">Show Time</string>
+    <string name="B_BDate">Select Date</string>
+    <string name="B_BBDate">08/04/2021</string>
+    <string name="B_BBookButton">Book</string>
+
+    <string name="B_BDname">Show Details</string>
+    <string name="B_BDcancelButton">Cancel</string>
+
+</resources>
