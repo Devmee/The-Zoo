@@ -18,12 +18,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class BirdShow extends AppCompatActivity {
+public class TourBooking extends AppCompatActivity {
 
     //get wigdets
-    EditText B_Seat,B_date;
-    Button Bsnbtn;
-    Spinner Btime;
+    EditText Dv_email,Dv_date,Dv_Adult,Dv_Child;
+    Button tbnbtn;
+    Spinner Tnation;
     String userID,userid,email;
     FirebaseAuth fauth = FirebaseAuth.getInstance();
     DatabaseReference reff;
@@ -32,25 +32,26 @@ public class BirdShow extends AppCompatActivity {
     int month;
     int day;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bird_show);
+        setContentView(R.layout.activity_tour_booking);
         getSupportActionBar().hide();
-        B_date=findViewById(R.id.B_B_Date2);
+        Dv_date=findViewById(R.id.dv_date2);
         Calendar calendar = Calendar.getInstance();
-        B_date.setOnClickListener(new View.OnClickListener() {
+        Dv_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 year= calendar.get(Calendar.YEAR);
                 month=calendar.get(Calendar.MONTH);
                 day=calendar.get(Calendar.DAY_OF_MONTH);
-                DatePickerDialog datePickerDialog = new DatePickerDialog(BirdShow.this, new DatePickerDialog.OnDateSetListener() {
+                DatePickerDialog datePickerDialog = new DatePickerDialog(TourBooking.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
-                        B_date.setText(SimpleDateFormat.getDateInstance().format(calendar.getTime()));
+                        Dv_date.setText(SimpleDateFormat.getDateInstance().format(calendar.getTime()));
 
                     }
                 }, year,month,day);
@@ -59,12 +60,14 @@ public class BirdShow extends AppCompatActivity {
             }
         });
 
-        //assign id's
 
-        B_Seat= findViewById(R.id.B_BirdShow2);
-        Btime= findViewById(R.id.B_BShowTimeS);
-        B_date= findViewById(R.id.B_B_Date2);
-        Bsnbtn= findViewById(R.id.B_BButton);
+        //assign id's
+        Dv_email = findViewById(R.id.dv_email2);
+        Tnation= findViewById(R.id.Dv_national);
+        Dv_Adult= findViewById(R.id.dv_numofA2);
+        Dv_Child= findViewById(R.id.dv_numofAc2);
+        Dv_date= findViewById(R.id.dv_date2);
+        tbnbtn= findViewById(R.id.Dv_submit1);
 
 
 
@@ -75,28 +78,27 @@ public class BirdShow extends AppCompatActivity {
 
 
 
-        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("BirdShow");
+        reff= FirebaseDatabase.getInstance().getReference("GuidedTour").child("GTour");
 
-        Bsnbtn.setOnClickListener(new View.OnClickListener() {
+        tbnbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                insertAqShow();
+                insertTbook();
             }
         });
     }
-    private void insertAqShow() {
-
-        String Bs_Seat = B_Seat.getText().toString();
-        String Bstime = Btime.getSelectedItem().toString();
-        String Bs_date = B_date.getText().toString();
-
-
-        B_Show BB =new B_Show (Bs_Seat,Bstime,Bs_date,userID);
-
-        reff.push().setValue(BB);
-        Toast.makeText(BirdShow.this, "Booking successful", Toast.LENGTH_LONG).show();
+    private void insertTbook() {
+        String Gtemail = Dv_email.getText().toString();
+        String Gtnation = Tnation.getSelectedItem().toString();
+        String Gtadult = Dv_Adult.getText().toString();
+        String Gtchild = Dv_Child.getText().toString();
+        String Gtdate = Dv_date.getText().toString();
 
 
+        GtBook dv =new GtBook (Gtemail,Gtnation,Gtadult,Gtchild,Gtdate,userID);
+
+        reff.push().setValue(dv);
+        Toast.makeText(TourBooking.this, "Booking successful", Toast.LENGTH_LONG).show();
 
 
     }

@@ -83,7 +83,7 @@
           tools:src="@drawable/ic_p" />
 
       <TextView
-          android:id="@+id/textView18"
+          android:id="@+id/uphone_text"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_weight="1"

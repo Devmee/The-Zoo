@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:backgroundTint="#CDEADC"
+    android:backgroundTint="#E6FBF1"
     tools:context=".Home">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/H_AnimalF"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
@@ -18,13 +18,15 @@
         android:layout_marginBottom="60dp"
         android:backgroundTint="#71562E"
         android:text="@string/S_HAButton"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/H_AnimalS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/H_BookT"
+
+        />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/H_AnimalS"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
@@ -33,13 +35,15 @@
         android:layout_marginBottom="60dp"
         android:backgroundTint="#71562E"
         android:text="@string/S_HASButton"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/H_GuidedT"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/H_AnimalF"
+
+        />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/H_GuidedT"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
@@ -51,7 +55,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/H_AnimalS"
+
+        />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -76,7 +82,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView14"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/H_BookT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pngitem_802725_removebg_preview__1_" />
@@ -90,7 +96,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView15"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/H_AnimalF"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:srcCompat="@drawable/_2815_200_removebg_preview" />
@@ -104,7 +110,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView16"
-        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintEnd_toStartOf="@+id/H_AnimalS"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView14"
         app:srcCompat="@drawable/_902846_84_removebg_preview" />
@@ -118,13 +124,13 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/H_GuidedT"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView15"
         app:srcCompat="@drawable/tour_guide_icon_14_removebg_preview" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/H_BookT"
         android:layout_width="280dp"
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
@@ -133,13 +139,15 @@
         android:layout_marginBottom="60dp"
         android:backgroundTint="#71562E"
         android:text="@string/S_HTButton"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/H_AnimalF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/BookPT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
@@ -150,10 +158,10 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView12"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/H_BookT" />
 
     <TextView
-        android:id="@+id/textView19"
+        android:id="@+id/BookPAF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -163,10 +171,10 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView14"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/H_AnimalF" />
 
     <TextView
-        android:id="@+id/textView28"
+        android:id="@+id/BookPAS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
@@ -176,10 +184,10 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/H_AnimalS" />
 
     <TextView
-        android:id="@+id/textView29"
+        android:id="@+id/BookPG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="76dp"
@@ -189,6 +197,19 @@
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/H_GuidedT" />
+
+
+    <Button
+        android:id="@+id/profile_view_btn"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/ic_baseline_menu_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

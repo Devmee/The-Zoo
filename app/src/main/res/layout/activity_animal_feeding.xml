@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#E10000"
+    tools:context=".AnimalFeeding">
+
+    <Spinner
+        android:id="@+id/f2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+       android:background="@drawable/border"
+        android:layout_margin="15dp"
+        android:autofillHints="Age"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="32dp"
+        android:entries="@array/animalFeed"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/D_date1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.445" />
+
+
+    <Spinner
+        android:id="@+id/f4"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_margin="15dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="25dp"
+        android:autofillHints="Age"
+        android:background="@drawable/border"
+        android:entries="@array/child_adult"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/D_email1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/D_date1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="315dp"
+        android:layout_marginEnd="74dp"
+        app:layout_constraintBottom_toTopOf="@+id/f4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+
+            android:id="@+id/D_date2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+            android:ems="10"
+            android:hint="@string/Datepicker"
+            android:inputType="date"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+             />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/D_email1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625">
+
+        <EditText
+            android:id="@+id/D_email2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="476dp"
+            android:autofillHints="Age"
+            android:ems="10"
+            android:hint="@string/TextAge"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/D_submit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4BC850"
+        android:text="@string/Firstbtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781"
+        app:shapeAppearanceOverlay="@style/Book_Now" />
+
+    <TextView
+        android:id="@+id/AnimalFeeding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="87dp"
+        android:fontFamily="@font/cherry_cream_soda"
+        android:text="@string/functionname"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/f3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_margin="15dp"
+        android:layout_marginStart="25dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/border"
+        android:entries="@array/time1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/D_date1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.749" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

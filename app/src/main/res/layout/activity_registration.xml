@@ -19,13 +19,13 @@
         android:textColorHint="#9E922B"
         android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+        app:layout_constraintBottom_toTopOf="@+id/S_Rusername"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
+        android:id="@+id/S_Rusername"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
@@ -38,14 +38,14 @@
         app:startIconDrawable="@drawable/ic_rp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
+            android:id="@+id/S_Rusername2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_EmailAddrss" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
+        android:id="@+id/S_Remail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
@@ -54,18 +54,18 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/S_Rusername"
         app:startIconDrawable="@drawable/ic_em">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText2"
+            android:id="@+id/S_Remail2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_REmailAddrss" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/S_phone"
+        android:id="@+id/S_Rphone"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="380dp"
@@ -75,11 +75,11 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/S_Remail"
         app:startIconDrawable="@drawable/ic_p">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editS_phone"
+            android:id="@+id/S_Rphone2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_RcontactNum"/>
@@ -87,7 +87,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/S_password"
+        android:id="@+id/S_Rpassword"
 
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="380dp"
@@ -97,11 +97,11 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S_phone"
+        app:layout_constraintTop_toBottomOf="@+id/S_Rphone"
         app:startIconDrawable="@drawable/ic_pw">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editS_password2"
+            android:id="@+id/S_Rpassword2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_Rpassword"/>
@@ -109,7 +109,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/S_Cp"
+        android:id="@+id/S_RconfirmP"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
@@ -118,11 +118,11 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S_password"
+        app:layout_constraintTop_toBottomOf="@+id/S_Rpassword"
         app:startIconDrawable="@drawable/ic_pw">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/S_Cp2"
+            android:id="@+id/S_RconfirmP2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_RCpassword"/>
@@ -142,7 +142,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S_Cp" />
+        app:layout_constraintTop_toBottomOf="@+id/S_RconfirmP" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

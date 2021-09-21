@@ -17,43 +17,15 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="80dp"
-        android:layout_marginBottom="100dp"
         android:fontFamily="@font/cherry_cream_soda"
         android:text="@string/S_TicketBname"
         android:textAlignment="center"
         android:textColor="#C3364F5E"
         android:textSize="50sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/S_Nat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/S_Nat"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:startIconDrawable="@drawable/ic_cn"
-        >
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:inputType="none"
-            android:text="@string/S_TNational"
-            android:textColor="#000000"
-            android:textColorHint="#000000" />
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/S_adult"
@@ -61,12 +33,13 @@
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="110dp"
         android:textColorHint="#E6000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S_Nat"
+        app:layout_constraintTop_toTopOf="parent"
         app:startIconDrawable="@drawable/ic_baseline_emoji_people_24"
         app:suffixTextColor="#6A1919">
 
@@ -75,6 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_TAdult"
+            android:inputType="numberDecimal"
             android:textColorHint="#000000"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -88,9 +62,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/S_adult"
+        app:layout_constraintVertical_bias="0.025"
         app:startIconDrawable="@drawable/ic_ch"
         app:suffixTextColor="#6A1919">
 
@@ -99,6 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_TChild"
+            android:inputType="numberDecimal"
             android:textColorHint="#000000"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -112,16 +89,21 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textColorHint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/S_child"
+        app:layout_constraintVertical_bias="0.034"
         app:startIconDrawable="@drawable/ic_baseline_calendar_today_24"
         app:suffixTextColor="#6A1919">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/S_Date2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/S_TDate"
+            android:inputType="date"
             android:textColorHint="#000000"
             android:textStyle="bold" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -131,29 +113,64 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginStart="164dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="164dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#54D159"
         android:text="@string/S_TBook"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/S_Date"
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/Book_Now" />
+
+    <Spinner
+        android:id="@+id/S_national"
+        android:layout_width="332dp"
+        android:layout_height="56dp"
+        android:layout_margin="15dp"
+        android:autofillHints="Nationality"
+        android:background="@drawable/border"
+        android:entries="@array/S_Nationality"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.303"
+        app:startIconDrawable="@drawable/ic_baseline_calendar_today_24" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.316"
+        app:srcCompat="@drawable/ic_cn" />
+
+    <FrameLayout
+        android:layout_width="53dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S_Date"
-        app:layout_constraintVertical_bias="0.358"
-        app:shapeAppearanceOverlay="@style/Book_Now"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31">
 
-        />
-
-
-
-
-
-
-
-
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,11 +23,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/M_NoS"
+        android:id="@+id/B_BirdShow1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
+        android:layout_width="390dp"
+        android:layout_height="68dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
@@ -36,49 +36,30 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/B_BirdShow2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/B_BSeat" />
+            android:hint="@string/B_BSeat"
+            android:inputType="numberDecimal"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/M_Show2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-
-        android:layout_width="380dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/M_NoS">
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:inputType="none"
-            android:text="@string/B_BShowtime" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/M_calen2"
+        android:id="@+id/B_B_Date"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
+        android:layout_width="392dp"
+        android:layout_height="64dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="8dp"
         app:endIconDrawable="@drawable/ic_baseline_calendar_today_24"
         app:endIconMode="custom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/M_Show2">
+        app:layout_constraintTop_toBottomOf="@+id/B_BirdShow1"
+        tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/B_B_Date2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/B_BDate"
@@ -87,20 +68,37 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/M_aqButton"
+        android:id="@+id/B_BButton"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginTop="500dp"
         android:backgroundTint="#63D85B"
         android:text="@string/B_BBookButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/M_calen2"
-        app:shapeAppearanceOverlay="@style/Book_Now"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Book_Now" />
+
+    <Spinner
+        android:id="@+id/B_BShowTimeS"
+        android:layout_width="389dp"
+        android:layout_height="64dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+
+
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="59dp"
+        android:background="@drawable/border"
+        android:entries="@array/B_Bshow_time"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/B_B_Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B_BirdShow1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

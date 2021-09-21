@@ -24,90 +24,48 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/M_anty"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/textInputLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
-        <AutoCompleteTextView
-            android:id="@+id/M_anty2"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_weight="1"
-            android:inputType="none"
-            android:text="@string/B_AnimalType" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/textInputLayout3"
+        android:id="@+id/B_AnimalS2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/S_T"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/B_AShowTimeS"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/M_anty">
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+
+        >
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/B_Aq_Number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Number Of Seats" />
+            android:hint="Number Of Seats"
+            android:inputType="numberDecimal"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/S_T"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="380dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/calen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
-
-        <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView3"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_weight="1"
-            android:inputType="none"
-            android:text="@string/B_Showtime" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/calen"
+        android:id="@+id/B_Date"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="50dp"
         app:endIconDrawable="@drawable/ic_baseline_calendar_today_24"
         app:endIconMode="custom"
-        app:layout_constraintBottom_toTopOf="@+id/M_aqButton"
+        app:layout_constraintBottom_toTopOf="@+id/B_AButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/S_T">
+        app:layout_constraintTop_toBottomOf="@+id/B_AShowTimeS">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/B_Date2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/B_ADate"
@@ -117,7 +75,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/M_aqButton"
+        android:id="@+id/B_AButton"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginBottom="80dp"
@@ -127,8 +85,46 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calen"
+        app:layout_constraintTop_toBottomOf="@+id/B_Date"
         app:shapeAppearanceOverlay="@style/Book_Now"
         />
+
+    <Spinner
+        android:id="@+id/B_Aanimal"
+        android:layout_width="382dp"
+        android:layout_height="61dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/border"
+        android:entries="@array/B_Aqshow_ani"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/B_AnimalS2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+
+        app:layout_constraintVertical_bias="0.93" />
+
+    <Spinner
+        android:id="@+id/B_AShowTimeS"
+        android:layout_width="382dp"
+        android:layout_height="62dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="27dp"
+
+
+        android:background="@drawable/border"
+        android:entries="@array/B_Aqshow_time"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/B_Date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B_AnimalS2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

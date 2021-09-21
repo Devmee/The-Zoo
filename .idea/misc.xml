@@ -3,9 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/border.xml" value="0.24027777777777778" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/d_btn_reg.xml" value="0.24027777777777778" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/d_input_bg.xml" value="0.24027777777777778" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/dropdown.xml" value="0.24027777777777778" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/edittextdesign.xml" value="0.24027777777777778" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_animal_feeding.xml" value="0.264" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_animal_feeding_details.xml" value="0.22592592592592592" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_animal_show_home.xml" value="0.2" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_aquarium_show.xml" value="0.2" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_bird_show.xml" value="0.2" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_bird_show_details.xml" value="0.1" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_forget_password.xml" value="0.22592592592592592" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_guided_tour_home.xml" value="0.1" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_home.xml" value="0.22592592592592592" />
-        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_login_details.xml" value="0.1102077687443541" />
-        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_main.xml" value="0.1102077687443541" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_login_details.xml" value="0.16799999999999998" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_registration.xml" value="0.2" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_ticket_book_details.xml" value="0.1" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_ticketbooking.xml" value="0.2" />
+        <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_tour_booking.xml" value="0.2105978260869565" />
       </map>
     </option>
   </component>
@@ -14,5 +31,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -36,22 +36,21 @@
 
 
     <string name="S_TicketBname">Book Your Ticket</string>
-    <string-array name="Nationality">
+    <string-array name="S_Nationality">
         <item> Local</item>
         <item> Foreign</item>
     </string-array>
     <string name="S_TNational">Nationality</string>
     <string name="S_TAdult">Adult (Over 15)</string>
     <string name="S_TChild">Child (5 -15)</string>
-    <string name="S_TDate">08/04/2021</string>
+    <string name="S_TDate">Select Date</string>
     <string name="S_TBook">Book Now</string>
 
     <string name="S_TDname">Booking Details</string>
     <string name="S_TDcancelButton">Cancel Booking</string>
 
 
-
-----------------------------------------------------------------------
+    ----------------------------------------------------------------------
 
 
     <string name="B_AnameButton">Aquarium Show</string>
@@ -75,4 +74,88 @@
     <string name="B_BDname">Show Details</string>
     <string name="B_BDcancelButton">Cancel</string>
 
+
+    <string name="animalDB">Select Animal</string>
+    <string name="functionname">Animal Feeding</string>
+    <string name="viewtext">View Details</string>
+    <string name="Animaldropdown">Select Animal</string>
+    <string name="Timedropdown">Time Duration</string>
+    <string name="Datepicker">Date</string>
+    <string name="Radiobutton1">Child</string>
+    <string name="Radiobutton2">Adult</string>
+    <string name="TextAge">Age</string>
+    <string name="Firstbtn">Submit</string>
+
+    <string-array name="animalFeed">
+        <item>Select Animal</item>
+        <item>Elephant</item>
+        <item>Giraffe</item>
+        <item>Fish</item>
+        <item>Koala Bear</item>
+    </string-array>
+
+    <string-array name="time1">
+        <item>Select Time</item>
+        <item>5 minutes</item>
+        <item>10 minutes</item>
+        <item>15 minutes</item>
+    </string-array>
+
+    <string name="dv_guidedTours">Guided Tours</string>
+    <string name="dv_Rep">Reptopia Tour</string>
+    <string name="dv_booknow">Book Now</string>
+    <string name="dv_email">Enter Your Email</string>
+    <string name="dv_local">Local</string>
+    <string name="dv_foreign">Foreign</string>
+    <string name="dv_adults">No.Of Adults</string>
+    <string name="dv_children">No.Of Children</string>
+    <string name="dv_date">Enter Date</string>
+    <string name="dv_fname">Book Your Tour</string>
+
+    <array name="nationality">
+        <item>Local</item>
+        <item>Foreign</item>
+    </array>
+
+    <string name="forget_topic">Forget Password</string>
+    <string name="d_loginaddress">Email Address</string>
+    <string name="d_loginBtn">Login</string>
+
+    <array name="child_adult">
+        <item>Child</item>
+        <item>Adult</item>
+    </array>
+
+    <string name="Fg_Buttonn">Login</string>
+    <string name="S_FEmailAddrss">Enter Your Email</string>
+
+
+    <array name="B_Aqshow_ani">
+        <item>Select Animal</item>
+        <item>Dolphin</item>
+        <item>Penguine</item>
+        <item>Sea Lion</item>
+    </array>
+
+    <string-array name="B_Aqshow_time">
+        <item>Select Time</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+    </string-array>
+
+    <string-array name="B_Bshow_time">
+        <item>Select Time</item>
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>45 minutes</item>
+    </string-array>
+
+
+    <string-array name="Dv_Nationl">
+        <item>National</item>
+        <item>Local</item>
+        <item>Foreign</item>
+
+    </string-array>
 </resources>
