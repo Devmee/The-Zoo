@@ -172,4 +172,12 @@
         app:shapeAppearanceOverlay="@style/Book_Now"
         />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="579dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
