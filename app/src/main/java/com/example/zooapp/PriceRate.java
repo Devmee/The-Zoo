@@ -3,6 +3,7 @@ package com.example.zooapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -39,6 +40,7 @@ public class PriceRate extends AppCompatActivity {
 
         //get value from the database
         reff.addValueEventListener(new ValueEventListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 //  for(DataSnapshot dataSnapshot: snapshot.getChildren()){
@@ -49,11 +51,10 @@ public class PriceRate extends AppCompatActivity {
                 String Option4 = String.valueOf(snapshot.child("Local_child").getValue(Long.class));
 
 
-
-                P_FAdult.setText(Option1);
-                P_FChild.setText(Option2);
-                P_LocalAdult.setText(Option3);
-                P_LocalChild.setText(Option4);
+                P_FAdult.setText("Rs "+ Option1);
+                P_FChild.setText("Rs "+Option2);
+                P_LocalAdult.setText("Rs "+Option3);
+                P_LocalChild.setText("Rs "+Option4);
 
             }
 
