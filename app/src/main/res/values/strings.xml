@@ -157,5 +157,17 @@
         <item>Local</item>
         <item>Foreign</item>
 
+
+
     </string-array>
+
+
+    <string name="S_Price">Price Chart(LKR)</string>
+
+    <string name="S_Prname">Zoo Price</string>
+    <string name="S_Prnationalty">Nationality</string>
+    <string name="S_Prchild">Child</string>
+    <string name="S_Pradult">Adult</string>
+    <string name="S_Prlocal">Local</string>
+    <string name="S_Prforiegn">Foriegn</string>
 </resources>

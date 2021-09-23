@@ -30,14 +30,14 @@ public class guided_tour_home extends AppCompatActivity {
         userID = getIntent().getStringExtra("keyuserID");
 
 
-        //go to the Ticket Booking
+        //go to the Guided Tour
         Rep1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(guided_tour_home.this,TourBooking.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
-        //go to the previous Ticket booking
+        //go to the Guided Tour
         Rep2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -45,7 +45,7 @@ public class guided_tour_home extends AppCompatActivity {
             }
         });
 
-        //go to the previous Ticket booking
+        //go to the Guided Tour
         Rep3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

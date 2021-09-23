@@ -3,6 +3,7 @@ package com.example.zooapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -26,7 +27,7 @@ public class Ticketbooking extends AppCompatActivity {
 
         EditText etDate;
         DatePickerDialog.OnDateSetListener setListener;
-
+        Button Prate_B;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class Ticketbooking extends AppCompatActivity {
         setContentView(R.layout.activity_ticketbooking);
 
     etDate=findViewById(R.id.S_Date2);
+    Prate_B=findViewById(R.id.S_PrateB);
 
     Calendar calendar = Calendar.getInstance();
     final int year =calendar.get(Calendar.YEAR);
@@ -61,5 +63,16 @@ public class Ticketbooking extends AppCompatActivity {
 
             }
         });
+
+
+        //direcct to the rates page
+        Prate_B.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Ticketbooking.this, PriceRate.class));
+            }
+        });
+
+
     }
 }

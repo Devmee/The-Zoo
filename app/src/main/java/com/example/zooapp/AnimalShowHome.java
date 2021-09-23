@@ -30,14 +30,14 @@ public class AnimalShowHome extends AppCompatActivity {
         userID = getIntent().getStringExtra("keyuserID");
 
 
-        //go to the Ticket Booking
+        //go to the animal Show
         AnimalB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AnimalShowHome.this,AquariumShow.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
-        //go to the previous Ticket booking
+        //go to the bird Show
         BirdB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
