@@ -160,7 +160,6 @@
         <item>Foreign</item>
 
 
-
     </string-array>
 
     <string name="S_PricClick">Cheack Price Rate</string>
@@ -172,6 +171,21 @@
     <string name="S_Pradult">Adult</string>
     <string name="S_Prlocal">Local</string>
     <string name="S_Prforiegn">Foriegn</string>
+
+
+    <string name="list_park">Park</string>
+    <string name="list_nationality">Nationality</string>
+    <string name="list_adults">Adults</string>
+    <string name="list_amount">Amount</string>
+    <string name="list_child">Children</string>
+    <string name="list_tot">Total Amount</string>
+    <string name="list_date">Date</string>
+    <string name="list_4seat">4 Seat vehicles</string>
+    <string name="list_6seat">6 Seat vehicles</string>
+    <string name="list_8seat">8 Seat vehicles</string>
+    <string name="list_tot_vehi">Total Vehicles</string>
+    <string name = "list_u_id">UserID</string>
+    <string name="t_delete">Cancel Booking</string>
 
 
 </resources>
