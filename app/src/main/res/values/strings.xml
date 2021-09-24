@@ -37,6 +37,7 @@
 
     <string name="S_TicketBname">Book Your Ticket</string>
     <string-array name="S_Nationality">
+        <item>National</item>
         <item> Local</item>
         <item> Foreign</item>
     </string-array>
@@ -113,6 +114,7 @@
     <string name="dv_fname">Book Your Tour</string>
 
     <array name="nationality">
+
         <item>Local</item>
         <item>Foreign</item>
     </array>
@@ -161,7 +163,7 @@
 
     </string-array>
 
-
+    <string name="S_PricClick">Cheack Price Rate</string>
     <string name="S_Price">Price Chart(LKR)</string>
 
     <string name="S_Prname">Zoo Price</string>
@@ -170,4 +172,6 @@
     <string name="S_Pradult">Adult</string>
     <string name="S_Prlocal">Local</string>
     <string name="S_Prforiegn">Foriegn</string>
+
+
 </resources>

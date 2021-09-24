@@ -157,7 +157,8 @@
             android:id="@+id/S_Lp2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/S_Lpassword" />
+            android:hint="@string/S_Lpassword"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView

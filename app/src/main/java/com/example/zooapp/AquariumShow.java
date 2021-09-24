@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -91,6 +92,17 @@ public class AquariumShow extends AppCompatActivity {
         String AAq_Seat = Aq_Seat.getText().toString();
         String AAqtime = Aqtime.getSelectedItem().toString();
         String AAq_date = Aq_date.getText().toString();
+
+
+        if(TextUtils.isEmpty(AAq_Seat)){
+            Aq_Seat.setError("  Required!");
+            return;
+        }
+
+        if(TextUtils.isEmpty(AAq_date)){
+            Aq_date.setError("Date Is Required!");
+            return;
+        }
 
 
         AqShow B =new AqShow (AAqanimal,AAqtime,AAq_date,AAq_Seat,userID);
