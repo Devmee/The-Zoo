@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -89,6 +90,17 @@ public class BirdShow extends AppCompatActivity {
         String Bs_Seat = B_Seat.getText().toString();
         String Bstime = Btime.getSelectedItem().toString();
         String Bs_date = B_date.getText().toString();
+
+
+        if(TextUtils.isEmpty(Bs_Seat)){
+            B_Seat.setError("  Required!");
+            return;
+        }
+
+        if(TextUtils.isEmpty(Bs_date)){
+            B_date.setError("Date Is Required!");
+            return;
+        }
 
 
         B_Show BB =new B_Show (Bs_Seat,Bstime,Bs_date,userID);

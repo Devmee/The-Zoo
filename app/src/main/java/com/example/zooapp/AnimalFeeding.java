@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -93,13 +94,27 @@ public class AnimalFeeding extends AppCompatActivity {
                 insertFeeding();
             }
         });
+
     }
+
     private void insertFeeding() {
         String fanimal = animal.getSelectedItem().toString();
         String ftime = time.getSelectedItem().toString();
         String fa_date = a_date.getText().toString();
         String fch_ad = ch_ad.getSelectedItem().toString();
         String fage = age.getText().toString();
+
+        if(TextUtils.isEmpty(fa_date)){
+            a_date.setError("  Required!");
+            return;
+        }
+
+        if(TextUtils.isEmpty(fage)){
+            age.setError("Date Is Required!");
+            return;
+        }
+
+
 
         Feeding D =new Feeding(fanimal,ftime,fa_date,fch_ad,fage,userID);
 
@@ -111,4 +126,5 @@ public class AnimalFeeding extends AppCompatActivity {
 
 
     }
+
 }

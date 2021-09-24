@@ -15,24 +15,33 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Ticketbooking extends AppCompatActivity {
 
-
-        EditText etDate;
+        EditText S_Adult,S_Child,etDate;
+        Button STbook;
+        Spinner S_National;
+        String userID,userid,email;
+        TextView Prate_B;
         DatePickerDialog.OnDateSetListener setListener;
-        Button Prate_B;
+        FirebaseAuth fauth = FirebaseAuth.getInstance();
+         DatabaseReference reff;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ticketbooking);
+        getSupportActionBar().hide();
 
     etDate=findViewById(R.id.S_Date2);
     Prate_B=findViewById(R.id.S_PrateB);
@@ -72,6 +81,65 @@ public class Ticketbooking extends AppCompatActivity {
                 startActivity(new Intent(Ticketbooking.this, PriceRate.class));
             }
         });
+
+
+
+        //assign id's
+        S_National = findViewById(R.id.S_national);
+        S_Adult = findViewById(R.id.S_adult2);
+        S_Child= findViewById(R.id.S_child2);
+        etDate= findViewById(R.id.S_Date2);
+        STbook= findViewById(R.id.S_Book);
+
+
+
+        //get user id and email
+        userID = getIntent().getStringExtra("keyuserID");
+        email = getIntent().getStringExtra("keyEmail");
+
+
+
+
+        reff= FirebaseDatabase.getInstance().getReference("TicketBooking").child("TicketBookDetails");
+
+        STbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { insertS_Book();
+
+            }
+        });
+    }
+    private void insertS_Book() {
+        String Snational = S_National.getSelectedItem().toString();
+        String Sadult = S_Adult.getText().toString();
+        String Schild = S_Child.getText().toString();
+        String Sdate = etDate.getText().toString();
+
+
+        if(TextUtils.isEmpty(Sadult)){
+            S_Adult.setError("  Required!");
+            return;
+        }
+        if(TextUtils.isEmpty(Schild)){
+            S_Child.setError(" Required!");
+            return;
+        }
+        if(TextUtils.isEmpty(Sdate)){
+            etDate.setError("Date Is Required!");
+            return;
+        }
+
+
+
+        Ticket S =new Ticket (Snational,Sadult,Schild,Sdate,userID);
+
+        reff.push().setValue(S);
+        Toast.makeText(Ticketbooking.this, "Ticket Booking successful", Toast.LENGTH_LONG).show();
+
+        //form Validation
+
+
+
 
 
     }

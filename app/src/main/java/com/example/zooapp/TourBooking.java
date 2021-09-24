@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -93,6 +94,26 @@ public class TourBooking extends AppCompatActivity {
         String Gtadult = Dv_Adult.getText().toString();
         String Gtchild = Dv_Child.getText().toString();
         String Gtdate = Dv_date.getText().toString();
+
+
+        if(TextUtils.isEmpty(Gtemail)){
+            Dv_email.setError("  Required!");
+            return;
+        }
+        if(TextUtils.isEmpty(Gtadult)){
+            Dv_Adult.setError(" Required!");
+            return;
+        }
+        if(TextUtils.isEmpty(Gtchild)){
+            Dv_Child.setError("Date Is Required!");
+            return;
+        }
+
+        if(TextUtils.isEmpty(Gtdate)){
+            Dv_date.setError("Date Is Required!");
+            return;
+        }
+
 
 
         GtBook dv =new GtBook (Gtemail,Gtnation,Gtadult,Gtchild,Gtdate,userID);

@@ -3,12 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/SLIIT/year 2 sem 2/MADD/LastZoo/app/src/main/res/layout/activity_bird_show_details.xml" value="0.17798913043478262" />
-        <entry key="..\:/SLIIT/year 2 sem 2/MADD/LastZoo/app/src/main/res/layout/activity_ticket_book_details.xml" value="0.17798913043478262" />
         <entry key="..\:/SLIIT/year 2 sem 2/MADD/newzoo2/app/src/main/res/layout/activity_animal_feeding_details.xml" value="0.17798913043478262" />
         <entry key="..\:/SLIIT/year 2 sem 2/MADD/newzoo2/app/src/main/res/layout/activity_animal_show_home.xml" value="0.17798913043478262" />
         <entry key="..\:/SLIIT/year 2 sem 2/MADD/newzoo2/app/src/main/res/layout/activity_bird_show_details.xml" value="0.17798913043478262" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_animal_feeding.xml" value="0.25416666666666665" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_animal_feeding_details.xml" value="0.25416666666666665" />
         <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_bird_show_details.xml" value="0.17753623188405798" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_ticket_book_details.xml" value="0.25416666666666665" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_ticketbooking.xml" value="0.25416666666666665" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_tour_booking.xml" value="0.17753623188405798" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/border.xml" value="0.24027777777777778" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/d_btn_reg.xml" value="0.24027777777777778" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/d_input_bg.xml" value="0.24027777777777778" />
