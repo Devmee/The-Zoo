@@ -10,14 +10,16 @@ public class Feeding {
     private String ch_ad;
     private String age;
     private String userID;
+    private String tktKeyValue;
 
-    public Feeding(String animal, String time, String a_date, String ch_ad, String age, String userID) {
+    public Feeding(String animal, String time, String a_date, String ch_ad, String age, String userID,String tktKeyValue) {
         this.animal = animal;
         this.time = time;
         this.a_date = a_date;
         this.ch_ad = ch_ad;
         this.age = age;
         this.userID = userID;
+        this.tktKeyValue=tktKeyValue;
     }
 
     public String getAnimal() {
@@ -42,6 +44,10 @@ public class Feeding {
 
     public String getUserID() {
         return userID;
+    }
+
+    public String getTktKeyValue() {
+        return tktKeyValue;
     }
 
 

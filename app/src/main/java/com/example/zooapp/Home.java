@@ -70,7 +70,7 @@ public class Home extends AppCompatActivity {
         PAF_Book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, AnimalFeedingDetails.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
+                startActivity(new Intent(Home.this, AnimalFeedingView.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
 

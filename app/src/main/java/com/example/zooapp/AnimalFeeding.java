@@ -103,6 +103,9 @@ public class AnimalFeeding extends AppCompatActivity {
         String fa_date = a_date.getText().toString();
         String fch_ad = ch_ad.getSelectedItem().toString();
         String fage = age.getText().toString();
+        //get current object id
+        String id = reff.push().getKey();
+
 
         if(TextUtils.isEmpty(fa_date)){
             a_date.setError("  Required!");
@@ -116,7 +119,7 @@ public class AnimalFeeding extends AppCompatActivity {
 
 
 
-        Feeding D =new Feeding(fanimal,ftime,fa_date,fch_ad,fage,userID);
+        Feeding D =new Feeding(fanimal,ftime,fa_date,fch_ad,fage,userID,id);
 
         reff.push().setValue(D);
         Toast.makeText(AnimalFeeding.this, "Booking successful", Toast.LENGTH_LONG).show();
