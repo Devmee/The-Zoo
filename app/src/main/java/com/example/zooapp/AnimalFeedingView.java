@@ -19,42 +19,40 @@ public class AnimalFeedingView extends AppCompatActivity {
 
 
     RecyclerView recyclerView;
-    private FirebaseDatabase db = FirebaseDatabase.getInstance();
-    private DatabaseReference root ;
-    private MyAdapter adapter;
-    private ArrayList<Feeding> list;
+    DatabaseReference reff;
+    MyAdapter myAdapter;
+    ArrayList<feedingMod>mList;
     String userID,email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animal_feeding_view);
-        getSupportActionBar().hide();
 
+        recyclerView=(RecyclerView)findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-
-        root = db.getReference("Feed").child("Feeding").child(userID);
-        recyclerView = findViewById(R.id.recyclerView);
-
+        reff= FirebaseDatabase.getInstance().getReference("Feed").child("Feeding");
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list = new ArrayList<>();
-        adapter = new MyAdapter(this,list);
+        mList = new ArrayList<>();
+        myAdapter =new MyAdapter(this,mList);
+        recyclerView.setAdapter(myAdapter);
 
-        recyclerView.setAdapter(adapter);
-
-
-        root.addValueEventListener(new ValueEventListener() {
+        reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    Feeding D = dataSnapshot.getValue(Feeding.class);
-                    list.add(D);
+                for (DataSnapshot dataSnapshot:snapshot.getChildren()){
+
+                    feedingMod F =dataSnapshot.getValue(feedingMod.class);
+                    mList.add(F);
+
                 }
-                adapter.notifyDataSetChanged();
+                myAdapter.notifyDataSetChanged();
+
             }
 
             @Override
@@ -62,6 +60,7 @@ public class AnimalFeedingView extends AppCompatActivity {
 
             }
         });
+
 
 
     }

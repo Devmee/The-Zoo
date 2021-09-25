@@ -24,11 +24,11 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    ArrayList<Feeding> mList;
+    ArrayList<feedingMod> mList;
     Context context;
 
 
-    public MyAdapter(Context context, ArrayList<Feeding> mList){
+    public MyAdapter(Context context, ArrayList<feedingMod> mList){
         this.mList = mList;
         this.context = context;
     }
@@ -44,19 +44,21 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
-        Feeding D = mList.get(position);
 
 
-        holder.animal.setText(D.getAnimal());
-        holder.time.setText(D.getTime());
-        holder.a_date.setText(D.getA_date());
-        holder.ch_ad.setText(D.getCh_ad());
-        holder.age.setText(D.getAge());
+        feedingMod F = mList.get(position);
+
+
+        holder.animal.setText(F.getAnimal());
+        holder.time.setText(F.getTime());
+        holder.a_date.setText(F.getA_date());
+        holder.ch_ad.setText(F.getCh_ad());
+        holder.age.setText(F.getAge());
 
         //String norderId = String.valueOf(member.getTktKeyValue());
 
-        holder.userID.setText(D.getUserID());
-        holder.tktKeyValue.setText(D.getTktKeyValue());
+        holder.userID.setText(F.getUserID());
+        holder.tktKeyValue.setText(F.getTktKeyValue());
 
     }
 
@@ -70,7 +72,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public class MyViewHolder extends RecyclerView.ViewHolder{
 
         TextView animal,time,a_date,ch_ad,age, userID,tktKeyValue;
-        Button deleteBtn;
+
 
 
 
@@ -84,61 +86,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             a_date = itemView.findViewById(R.id.Date);
             ch_ad = itemView.findViewById(R.id.child);
             age = itemView.findViewById(R.id.tota);
-            deleteBtn = itemView.findViewById(R.id.deleteSaf);
+
             userID = itemView.findViewById(R.id.Oid);
             tktKeyValue = itemView.findViewById(R.id.usid);
 
 
-            deleteBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
 
-                    AlertDialog.Builder builder = new AlertDialog.Builder(context);
-
-                    builder.setMessage("Are you sure?");
-                    builder.setPositiveButton("Okay", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-
-                            String useID = userID.getText().toString();
-                            String  Vaniaml= animal.getText().toString();
-                            String VTime = time.getText().toString();
-                            String Vdate = a_date.getText().toString();
-                            String Vch = ch_ad.getText().toString();
-                            String Vage = age.getText().toString();
-                            String Vkey = tktKeyValue.getText().toString();
-
-
-                            Feeding  Dfeed = new Feeding( useID,Vkey,Vaniaml,VTime,Vdate,Vch,Vage);
-                            DatabaseReference dbref = FirebaseDatabase.getInstance().getReference("Feed").child("Feeding").child(useID).child(String.valueOf(Dfeed.getTktKeyValue()));
-
-                            Task<Void> mTsk = dbref.removeValue();
-                            //Toast.makeText(context,"Remove Succesfully!",Toast.LENGTH_SHORT).show();
-                            mTsk.addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    context.startActivity(new Intent(context, AnimalFeedingView.class).putExtra("keyuserID", useID));
-                                    Toast.makeText(context,"Remove Succesfully!",Toast.LENGTH_SHORT).show();
-                                    //showToast("Deleted Success!");
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(context,"UnSuccessfull",Toast.LENGTH_SHORT).show();
-                                }
-                            });
-
-                        }
-                    }).setNegativeButton("Cancle", null);
-
-                    AlertDialog alertDialog = builder.create();
-                    alertDialog.show();
-
-
-
-
-                }
-            });
 
         }
        
