@@ -35,7 +35,7 @@ public class AnimalFeedingView extends AppCompatActivity {
         email = getIntent().getStringExtra("keyEmail");
 
         root = db.getReference("Feed").child("Feeding").child(userID);
-        recyclerView = findViewById(R.id.recyclerViewAnimalF);
+        recyclerView = findViewById(R.id.recyclerView);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

@@ -151,6 +151,9 @@ public class Ticketbooking extends AppCompatActivity {
         String Schild = S_Child.getText().toString();
         String Sdate = etDate.getText().toString();
 
+        //get current object id
+        String id = reff.push().getKey();
+
 
         if(TextUtils.isEmpty(Sadult)){
             S_Adult.setError("  Required!");
@@ -199,7 +202,7 @@ public class Ticketbooking extends AppCompatActivity {
         fullAmount = child_t_Amount+ adult_t_Amount;
 
 
-        Ticket S =new Ticket (Snational,Sadult,Schild,Sdate,number_child,number_adult,child_t_Amount,adult_t_Amount,fullAmount,userID);
+        Ticket S =new Ticket (Snational,id,Sadult,Schild,Sdate,number_child,number_adult,child_t_Amount,adult_t_Amount,fullAmount,userID);
 
         reff.push().setValue(S);
         Toast.makeText(Ticketbooking.this, "Ticket Booking successful", Toast.LENGTH_LONG).show();

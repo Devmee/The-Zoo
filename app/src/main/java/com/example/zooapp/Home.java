@@ -54,7 +54,7 @@ public class Home extends AppCompatActivity {
         PT_Book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, TicketBookDetails.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
+                startActivity(new Intent(Home.this, ViewTicketBooking.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
 
