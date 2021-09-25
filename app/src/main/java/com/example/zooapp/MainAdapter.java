@@ -99,7 +99,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MyViewHolder> 
             deleteBtn = itemView.findViewById(R.id.deleteSaf);
 
 
-
+            //Ticket Delete
             deleteBtn.setOnClickListener(new View.OnClickListener() {
 
 
