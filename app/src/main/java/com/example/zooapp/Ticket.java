@@ -11,9 +11,10 @@ public class Ticket {
     private double child_t_Amount;
     private double adult_t_Amount;
     private double total_amount;
-    private String userID;
+    private  String userID;
+    private  String tktKeyValue;
 
-    public Ticket(String s_National, String s_Adult, String s_Child, String etDate, int number_child, int number_adult, double child_t_Amount, double adult_t_Amount, double total_amount, String userID) {
+    public Ticket(String s_National, String tktKeyValue,String s_Adult, String s_Child, String etDate, int number_child, int number_adult, double child_t_Amount, double adult_t_Amount, double total_amount, String userID) {
         S_National = s_National;
         S_Adult = s_Adult;
         S_Child = s_Child;
@@ -23,7 +24,9 @@ public class Ticket {
         this.child_t_Amount = child_t_Amount;
         this.adult_t_Amount = adult_t_Amount;
         this.total_amount = total_amount;
+        this.tktKeyValue = tktKeyValue;
         this.userID = userID;
+
     }
 
     public String getS_National() {
@@ -62,7 +65,13 @@ public class Ticket {
         return total_amount;
     }
 
+    public String getTktKeyValue() {
+        return tktKeyValue;
+    }
+
     public String getUserID() {
         return userID;
     }
+
+
 }

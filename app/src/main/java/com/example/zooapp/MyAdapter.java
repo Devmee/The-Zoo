@@ -36,7 +36,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.item,parent,false);
+        View v = LayoutInflater.from(context).inflate(R.layout.item2,parent,false);
 
         return new MyViewHolder(v);
     }
@@ -79,14 +79,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            animal = itemView.findViewById(R.id.park_txt);
-            time = itemView.findViewById(R.id.type_txt);
-            a_date = itemView.findViewById(R.id.fulltkt_txt);
-            ch_ad = itemView.findViewById(R.id.halftkt_txt);
-            age = itemView.findViewById(R.id.fulltktAmount_txt);
+            animal = itemView.findViewById(R.id.tvfirstName);
+            time = itemView.findViewById(R.id.tvlastName);
+            a_date = itemView.findViewById(R.id.Date);
+            ch_ad = itemView.findViewById(R.id.child);
+            age = itemView.findViewById(R.id.tota);
             deleteBtn = itemView.findViewById(R.id.deleteSaf);
-            userID = itemView.findViewById(R.id.userID);
-            tktKeyValue = itemView.findViewById(R.id.orderID_txt);
+            userID = itemView.findViewById(R.id.Oid);
+            tktKeyValue = itemView.findViewById(R.id.usid);
 
 
             deleteBtn.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +109,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                             String Vkey = tktKeyValue.getText().toString();
 
 
-                            Feeding  Dfeed = new Feeding( useID,Vaniaml,VTime,Vdate,Vch,Vage,Vkey);
+                            Feeding  Dfeed = new Feeding( useID,Vkey,Vaniaml,VTime,Vdate,Vch,Vage);
                             DatabaseReference dbref = FirebaseDatabase.getInstance().getReference("Feed").child("Feeding").child(useID).child(String.valueOf(Dfeed.getTktKeyValue()));
 
                             Task<Void> mTsk = dbref.removeValue();
@@ -143,5 +143,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
        
     }
+
 
 }
