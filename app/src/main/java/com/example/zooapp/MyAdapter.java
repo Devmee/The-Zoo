@@ -46,19 +46,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 
 
-        feedingMod F = mList.get(position);
+        feedingMod  fee = mList.get(position);
 
 
-        holder.animal.setText(F.getAnimal());
-        holder.time.setText(F.getTime());
-        holder.a_date.setText(F.getA_date());
-        holder.ch_ad.setText(F.getCh_ad());
-        holder.age.setText(F.getAge());
+        holder.animal.setText(fee.getAnimal());
+        holder.time.setText(fee.getTime());
+        holder.a_date.setText(fee.getA_date());
+        holder.ch_ad.setText(fee.getCh_ad());
+        holder.age.setText(fee.getAge());
 
         //String norderId = String.valueOf(member.getTktKeyValue());
 
-        holder.userID.setText(F.getUserID());
-        holder.tktKeyValue.setText(F.getTktKeyValue());
+        holder.userID.setText(fee.getUserID());
+        holder.orderID.setText(fee.getTktKeyValue());
 
     }
 
@@ -69,9 +69,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView animal,time,a_date,ch_ad,age, userID,tktKeyValue;
+        TextView animal,time,a_date,ch_ad,age, userID,orderID;
 
 
 
@@ -81,14 +81,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            animal = itemView.findViewById(R.id.tvfirstName);
-            time = itemView.findViewById(R.id.tvlastName);
-            a_date = itemView.findViewById(R.id.Date);
-            ch_ad = itemView.findViewById(R.id.child);
-            age = itemView.findViewById(R.id.tota);
+            animal = itemView.findViewById(R.id.dype);
+            time = itemView.findViewById(R.id.Dtime);
+            a_date = itemView.findViewById(R.id.Ddate);
+            ch_ad = itemView.findViewById(R.id.Dcat);
+            age = itemView.findViewById(R.id.Dage);
 
-            userID = itemView.findViewById(R.id.Oid);
-            tktKeyValue = itemView.findViewById(R.id.usid);
+            orderID  = itemView.findViewById(R.id.orderIDD);
+            userID = itemView.findViewById(R.id.userIDD);
+
+
 
 
 

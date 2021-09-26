@@ -21,7 +21,7 @@ public class AnimalFeedingView extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseReference reff;
     MyAdapter myAdapter;
-    ArrayList<feedingMod>mList;
+    ArrayList<feedingMod>list;
     String userID,email;
 
     @Override
@@ -33,12 +33,12 @@ public class AnimalFeedingView extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-        reff= FirebaseDatabase.getInstance().getReference("Feed").child("Feeding");
+        reff= FirebaseDatabase.getInstance().getReference("Feeding").child("Feed").child(userID);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        mList = new ArrayList<>();
-        myAdapter =new MyAdapter(this,mList);
+        list = new ArrayList<>();
+        myAdapter =new MyAdapter(this,list);
         recyclerView.setAdapter(myAdapter);
 
         reff.addValueEventListener(new ValueEventListener() {
@@ -47,8 +47,8 @@ public class AnimalFeedingView extends AppCompatActivity {
 
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
 
-                    feedingMod F =dataSnapshot.getValue(feedingMod.class);
-                    mList.add(F);
+                    feedingMod fee =dataSnapshot.getValue(feedingMod.class);
+                    list.add(fee);
 
                 }
                 myAdapter.notifyDataSetChanged();

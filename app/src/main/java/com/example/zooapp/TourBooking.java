@@ -1,5 +1,6 @@
 package com.example.zooapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,10 +31,8 @@ public class TourBooking extends AppCompatActivity {
     String userID,userid,email;
     FirebaseAuth fauth = FirebaseAuth.getInstance();
     DatabaseReference reff;
+    DatePickerDialog.OnDateSetListener setListener;
 
-    int year;
-    int month;
-    int day;
 
 
     @Override
@@ -40,26 +41,13 @@ public class TourBooking extends AppCompatActivity {
         setContentView(R.layout.activity_tour_booking);
         getSupportActionBar().hide();
         Dv_date=findViewById(R.id.dv_date2);
+
+
+
         Calendar calendar = Calendar.getInstance();
-        Dv_date.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                year= calendar.get(Calendar.YEAR);
-                month=calendar.get(Calendar.MONTH);
-                day=calendar.get(Calendar.DAY_OF_MONTH);
-                DatePickerDialog datePickerDialog = new DatePickerDialog(TourBooking.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                        Dv_date.setText(SimpleDateFormat.getDateInstance().format(calendar.getTime()));
-
-                    }
-                }, year,month,day);
-                datePickerDialog.show();
-
-            }
-        });
+        final int year =calendar.get(Calendar.YEAR);
+        final int month =calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
 
 
         //assign id's
@@ -79,7 +67,27 @@ public class TourBooking extends AppCompatActivity {
 
 
 
-        reff= FirebaseDatabase.getInstance().getReference("GuidedTour").child("GTour");
+        reff= FirebaseDatabase.getInstance().getReference("GuidedTour").child("GTour").child(userID);
+
+
+        Dv_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog=new DatePickerDialog(
+                        TourBooking.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int day) {
+                        month=month+1;
+                        String date = day+"/"+month+"/"+year;
+
+                        Dv_date.setText(date);
+
+                    }
+                },year,month,day);
+                datePickerDialog.show();
+
+            }
+        });
 
         tbnbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +102,9 @@ public class TourBooking extends AppCompatActivity {
         String Gtadult = Dv_Adult.getText().toString();
         String Gtchild = Dv_Child.getText().toString();
         String Gtdate = Dv_date.getText().toString();
+
+        //get current object id
+        String id = reff.push().getKey();
 
 
         if(TextUtils.isEmpty(Gtemail)){
@@ -116,10 +127,24 @@ public class TourBooking extends AppCompatActivity {
 
 
 
-        GtBook dv =new GtBook (Gtemail,Gtnation,Gtadult,Gtchild,Gtdate,userID);
+        GtBook dv =new GtBook (id,Gtemail,Gtnation,Gtadult,Gtchild,Gtdate,userID);
 
-        reff.push().setValue(dv);
-        Toast.makeText(TourBooking.this, "Booking successful", Toast.LENGTH_LONG).show();
+
+        reff.child(id).setValue(dv).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Book  Saved",Toast.LENGTH_SHORT).show();
+
+                }else{
+
+                    Toast.makeText(TourBooking.this, "Error! " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+
 
 
     }

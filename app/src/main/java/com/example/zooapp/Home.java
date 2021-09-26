@@ -86,7 +86,7 @@ public class Home extends AppCompatActivity {
         PAS_Book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Bird_Show_Details.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
+                startActivity(new Intent(Home.this, ShowView.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
 
@@ -103,7 +103,7 @@ public class Home extends AppCompatActivity {
         PG_Book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, guided_tour_home.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
+                startActivity(new Intent(Home.this, GuidedView.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
 

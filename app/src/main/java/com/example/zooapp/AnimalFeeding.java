@@ -1,5 +1,6 @@
 package com.example.zooapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -86,7 +89,7 @@ public class AnimalFeeding extends AppCompatActivity {
 
 
 
-        reff= FirebaseDatabase.getInstance().getReference("Feed").child("Feeding");
+        reff= FirebaseDatabase.getInstance().getReference("Feeding").child("Feed").child(userID);
 
         anbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,8 +124,24 @@ public class AnimalFeeding extends AppCompatActivity {
 
         Feeding D =new Feeding(fanimal,ftime,fa_date,fch_ad,fage,userID,id);
 
+        /*
         reff.push().setValue(D);
-        Toast.makeText(AnimalFeeding.this, "Booking successful", Toast.LENGTH_LONG).show();
+        Toast.makeText(AnimalFeeding.this, "Booking successful", Toast.LENGTH_LONG).show();*/
+
+        reff.child(id).setValue(D).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Book Saved",Toast.LENGTH_SHORT).show();
+
+                }else{
+
+                    Toast.makeText(AnimalFeeding.this, "Error! " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
 
 
 

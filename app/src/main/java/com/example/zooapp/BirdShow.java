@@ -1,5 +1,6 @@
 package com.example.zooapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -12,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -28,10 +31,8 @@ public class BirdShow extends AppCompatActivity {
     String userID,userid,email;
     FirebaseAuth fauth = FirebaseAuth.getInstance();
     DatabaseReference reff;
+    DatePickerDialog.OnDateSetListener setListener;
 
-    int year;
-    int month;
-    int day;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,26 +40,11 @@ public class BirdShow extends AppCompatActivity {
         setContentView(R.layout.activity_bird_show);
         getSupportActionBar().hide();
         B_date=findViewById(R.id.B_B_Date2);
+
         Calendar calendar = Calendar.getInstance();
-        B_date.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                year= calendar.get(Calendar.YEAR);
-                month=calendar.get(Calendar.MONTH);
-                day=calendar.get(Calendar.DAY_OF_MONTH);
-                DatePickerDialog datePickerDialog = new DatePickerDialog(BirdShow.this, new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                        B_date.setText(SimpleDateFormat.getDateInstance().format(calendar.getTime()));
-
-                    }
-                }, year,month,day);
-                datePickerDialog.show();
-
-            }
-        });
+        final int year =calendar.get(Calendar.YEAR);
+        final int month =calendar.get(Calendar.MONTH);
+        final int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         //assign id's
 
@@ -76,7 +62,29 @@ public class BirdShow extends AppCompatActivity {
 
 
 
-        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("BirdShow");
+        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("BirdShow").child(userID);
+
+        B_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog datePickerDialog=new DatePickerDialog(
+                        BirdShow.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int day) {
+                        month=month+1;
+                        String date = day+"/"+month+"/"+year;
+
+                        B_date.setText(date);
+
+                    }
+                },year,month,day);
+                datePickerDialog.show();
+
+            }
+        });
+
+
+
 
         Bsnbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +100,9 @@ public class BirdShow extends AppCompatActivity {
         String Bs_date = B_date.getText().toString();
 
 
+        //get current object id
+        String id = reff.push().getKey();
+
         if(TextUtils.isEmpty(Bs_Seat)){
             B_Seat.setError("  Required!");
             return;
@@ -103,11 +114,26 @@ public class BirdShow extends AppCompatActivity {
         }
 
 
-        B_Show BB =new B_Show (Bs_Seat,Bstime,Bs_date,userID);
+        B_Show BB =new B_Show (Bs_Seat,Bstime,Bs_date,userID,id);
 
-        reff.push().setValue(BB);
-        Toast.makeText(BirdShow.this, "Booking successful", Toast.LENGTH_LONG).show();
 
+
+
+
+        reff.child(id).setValue(BB).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Book Saved",Toast.LENGTH_SHORT).show();
+
+                }else{
+
+                    Toast.makeText(BirdShow.this, "Error! " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
 
 
 
