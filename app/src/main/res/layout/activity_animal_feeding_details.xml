@@ -113,16 +113,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9_Aniamal_date" />
 
-    <Button
-        android:id="@+id/dvbtnup2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="153dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2_cancel_animal" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
