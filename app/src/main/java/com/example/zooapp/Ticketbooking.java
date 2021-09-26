@@ -18,6 +18,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -58,6 +60,10 @@ public class Ticketbooking extends AppCompatActivity {
     final int year =calendar.get(Calendar.YEAR);
     final int month =calendar.get(Calendar.MONTH);
     final int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+        //get user id and email
+        userID = getIntent().getStringExtra("keyuserID");
+        email = getIntent().getStringExtra("keyEmail");
 
        //create database connection to ticket price table
         rates = FirebaseDatabase.getInstance().getReference("TicketPrice").child("PriceRate");
@@ -102,14 +108,12 @@ public class Ticketbooking extends AppCompatActivity {
 
 
 
-        //get user id and email
-        userID = getIntent().getStringExtra("keyuserID");
-        email = getIntent().getStringExtra("keyEmail");
 
 
 
 
-        reff= FirebaseDatabase.getInstance().getReference("TicketBooking").child("TicketBookDetails");
+
+        reff= FirebaseDatabase.getInstance().getReference("TicketBooking").child("TicketBookDetails").child(userID);
 
 
         rates.addValueEventListener(new ValueEventListener() {
@@ -155,7 +159,7 @@ public class Ticketbooking extends AppCompatActivity {
         //get current object id
         String id = reff.push().getKey();
 
-
+        //form Validation
         if(TextUtils.isEmpty(Sadult)){
             S_Adult.setError("  Required!");
             return;
@@ -205,11 +209,40 @@ public class Ticketbooking extends AppCompatActivity {
 
         Ticket S =new Ticket (Snational,id,Sadult,Schild,Sdate,number_child,number_adult,child_t_Amount,adult_t_Amount,fullAmount,userID);
 
+        /*
         reff.push().setValue(S);
-        Toast.makeText(Ticketbooking.this, "Ticket Booking successful", Toast.LENGTH_LONG).show();
+        Toast.makeText(Ticketbooking.this, "Ticket Booking successful", Toast.LENGTH_LONG).show();*/
 
-        //form Validation
 
+        reff.child(id).setValue(S).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Order Saved",Toast.LENGTH_SHORT).show();
+
+                }else{
+                   
+                    Toast.makeText(Ticketbooking.this, "Error! " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+
+        /*reff.child(id).setValue(member).addOnCompleteListener(ticketsearch.this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Order Saved",Toast.LENGTH_SHORT).show();
+                    updateTicketData();
+                }else{
+                    Toast.makeText(ticketsearch.this,"Error! " + task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                }
+
+
+            }
+        });*/
 
 
 

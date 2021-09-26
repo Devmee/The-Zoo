@@ -15,42 +15,45 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ViewTicketBooking extends AppCompatActivity {
+public class ShowView extends AppCompatActivity {
 
     RecyclerView recyclerView;
     DatabaseReference reff;
-    MainAdapter mainAdapter;
-    ArrayList<MainModel>list;
+    ShowAdapter showAdapter;
+    ArrayList<ShowModel>list;
     String userID,email;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_ticket_booking);
+        setContentView(R.layout.activity_show_view);
 
-        recyclerView=(RecyclerView)findViewById(R.id.recyclerView2);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView =(RecyclerView)findViewById(R.id.ShowView);
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-        reff= FirebaseDatabase.getInstance().getReference("TicketBooking").child("TicketBookDetails").child(userID);
+        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("BirdShow").child(userID);
+
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list = new ArrayList<>();
-        mainAdapter =new MainAdapter(this,list);
-        recyclerView.setAdapter(mainAdapter);
+        list =new ArrayList<>();
+        showAdapter=new ShowAdapter(this,list);
+        recyclerView.setAdapter(showAdapter);
 
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
 
-                for (DataSnapshot dataSnapshot:snapshot.getChildren()){
+                    ShowModel showModel = dataSnapshot.getValue(ShowModel.class);
+                    list.add(showModel);
 
-                    MainModel mainModel =dataSnapshot.getValue(MainModel.class);
-                    list.add(mainModel);
+
+
 
                 }
-                mainAdapter.notifyDataSetChanged();
+                showAdapter.notifyDataSetChanged();
 
             }
 
@@ -59,7 +62,6 @@ public class ViewTicketBooking extends AppCompatActivity {
 
             }
         });
-
 
     }
 

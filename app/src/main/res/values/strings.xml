@@ -173,7 +173,6 @@
     <string name="S_Prforiegn">Foriegn</string>
 
 
-
     <string name="list_nationality">Nationality</string>
     <string name="list_adults">Adults</string>
     <string name="list_amount">Adults Amount</string>
@@ -181,8 +180,39 @@
     <string name="list_Childp">Childern Amount</string>
     <string name="list_TotalAmount">Total Amount</string>
     <string name="list_date">Book Date</string>
-    <string name = "list_u_id">UserID</string>
+    <string name="list_u_id">UserID</string>
     <string name="t_delete">Cancel Booking</string>
+
+
+    <string name="list_aniy">Animal Type</string>
+    <string name="list_seat">No of Seat Aq</string>
+    <string name="list_time">Aquarium Show Time</string>
+    <string name="list_sdate">Aquarium Show Date</string>
+    <string name="list_seat2">No of Seat Bird</string>
+    <string name="list_time2">Bird Show Time</string>
+    <string name="list_sdate2">Bird Show Date</string>
+    <string name="list_su_id">UserID</string>
+    <string name="sht_delete">Cancel Booking</string>
+
+
+    <string name="list_DwEm">Email</string>
+    <string name="list_DwNat">National</string>
+    <string name="list_DwNumA">Num Of Adult</string>
+    <string name="list_DwNumC">Num Of Childern</string>
+    <string name="list_DwDate">Date</string>
+    <string name="Lht_DwDte">Cancel Booking</string>
+
+
+    <string name="list_DjTy">Animal Type</string>
+    <string name="list_DjTime">Time Duration</string>
+    <string name="list_DJDate">Date</string>
+    <string name="list_Djchad">Category</string>
+    <string name="list_DjAge">Age</string>
+
+    <string name="Dj_delete">Cancel Booking</string>
+
+
+
 
 
 </resources>

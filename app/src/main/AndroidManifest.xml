@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZooApp">
         <activity
+            android:name=".GuidedView"
+            android:exported="true" />
+        <activity
+            android:name=".ShowView"
+            android:exported="true" />
+        <activity
             android:name=".AnimalFeedingView"
             android:exported="true" />
         <activity

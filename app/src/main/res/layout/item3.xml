@@ -24,7 +24,7 @@
 
 
             <TextView
-                android:id="@+id/orderIDD"
+                android:id="@+id/orderIDb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -53,13 +53,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="94dp"
                 android:padding="5dp"
-                android:text="@string/list_DjTy"
+                android:text="@string/list_aniy"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/dype"
+                android:id="@+id/atype"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -80,13 +80,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="133dp"
                 android:padding="5dp"
-                android:text="@string/list_DjTime"
+                android:text="@string/list_seat"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Dtime"
+                android:id="@+id/Numseat1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -107,13 +107,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="120dp"
                 android:padding="5dp"
-                android:text="@string/list_DJDate"
+                android:text="@string/list_time"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Ddate"
+                android:id="@+id/fshowtime1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="5dp"
@@ -134,13 +134,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="96dp"
                 android:padding="5dp"
-                android:text="@string/list_Djchad"
+                android:text="@string/list_sdate"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Dcat"
+                android:id="@+id/showdate1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -162,13 +162,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="120dp"
                 android:padding="5dp"
-                android:text="@string/list_DjAge"
+                android:text="@string/list_seat2"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Dage"
+                android:id="@+id/Numseat2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="0dp"
@@ -180,7 +180,59 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="70dp"
+                android:padding="5dp"
+                android:text="@string/list_time2"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/showtime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="total"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="122dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="152dp"
+                android:padding="5dp"
+                android:text="@string/list_sdate2"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/showdate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -190,7 +242,7 @@
 
 
             <TextView
-                android:id="@+id/userIDD"
+                android:id="@+id/userIDb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -249,7 +301,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/deleteSaf"
+                android:id="@+id/deleteShow"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

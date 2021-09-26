@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                             userID = fauth.getCurrentUser().getUid();
                             startActivity(new Intent(getApplicationContext(),Home.class).putExtra("keyEmail",email).putExtra("keyuserID",userID));
 
-
+                            prologin.setVisibility(View.GONE);
 
                         }else{
                             Toast.makeText(MainActivity.this,"Error! " + task.getException().getMessage(),Toast.LENGTH_LONG).show();

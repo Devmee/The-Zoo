@@ -15,30 +15,31 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ViewTicketBooking extends AppCompatActivity {
+public class GuidedView extends AppCompatActivity {
 
     RecyclerView recyclerView;
     DatabaseReference reff;
-    MainAdapter mainAdapter;
-    ArrayList<MainModel>list;
+    GuidAdapter guidAdapter;
+    ArrayList<GuidModel> list;
     String userID,email;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_ticket_booking);
+        setContentView(R.layout.activity_guided_view);
 
         recyclerView=(RecyclerView)findViewById(R.id.recyclerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-        reff= FirebaseDatabase.getInstance().getReference("TicketBooking").child("TicketBookDetails").child(userID);
+        reff= FirebaseDatabase.getInstance().getReference("GuidedTour").child("GTour").child(userID);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
-        mainAdapter =new MainAdapter(this,list);
-        recyclerView.setAdapter(mainAdapter);
+        guidAdapter =new GuidAdapter(this,list);
+        recyclerView.setAdapter(guidAdapter);
 
         reff.addValueEventListener(new ValueEventListener() {
             @Override
@@ -46,11 +47,11 @@ public class ViewTicketBooking extends AppCompatActivity {
 
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
 
-                    MainModel mainModel =dataSnapshot.getValue(MainModel.class);
-                    list.add(mainModel);
+                    GuidModel guidModel =dataSnapshot.getValue(GuidModel.class);
+                    list.add(guidModel);
 
                 }
-                mainAdapter.notifyDataSetChanged();
+                guidAdapter.notifyDataSetChanged();
 
             }
 
@@ -59,8 +60,5 @@ public class ViewTicketBooking extends AppCompatActivity {
 
             }
         });
-
-
     }
-
 }

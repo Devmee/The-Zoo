@@ -2,24 +2,37 @@ package com.example.zooapp;
 
 public class feedingMod {
 
+        String animal,time,a_date,ch_ad,age,userID;
 
-        private String animal;
-        private String time;
-        private String a_date;
-        private String ch_ad;
-        private String age;
-        private String userID;
         private String tktKeyValue;
 
-        public feedingMod(String animal, String time, String a_date, String ch_ad, String age, String userID, String tktKeyValue) {
+        public feedingMod(String userID, String tktKeyValue,String animal, String time, String a_date, String ch_ad, String age) {
+
+            this.userID = userID;
+            this.tktKeyValue = tktKeyValue;
             this.animal = animal;
             this.time = time;
             this.a_date = a_date;
             this.ch_ad = ch_ad;
             this.age = age;
-            this.userID = userID;
-            this.tktKeyValue = tktKeyValue;
+
         }
+
+         public String getUserID() {
+        return userID;
+    }
+
+         public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
+         public String getTktKeyValue() {
+        return tktKeyValue;
+    }
+
+        public void setTktKeyValue(String tktKeyValue) {
+        this.tktKeyValue = tktKeyValue;
+    }
 
         public String getAnimal() {
             return animal;
@@ -61,21 +74,7 @@ public class feedingMod {
             this.age = age;
         }
 
-        public String getUserID() {
-            return userID;
-        }
 
-        public void setUserID(String userID) {
-            this.userID = userID;
-        }
-
-        public String getTktKeyValue() {
-            return tktKeyValue;
-        }
-
-        public void setTktKeyValue(String tktKeyValue) {
-            this.tktKeyValue = tktKeyValue;
-        }
     }
 
 

@@ -7,12 +7,18 @@ public class B_Show {
     private String Btime;
     private String B_date;
     private String userID;
+    private  String tktKeyValue;
 
-    public B_Show(String b_Seat, String btime, String b_date, String userID) {
+    public B_Show(String b_Seat, String btime, String b_date, String userID,String tktKeyValue) {
         B_Seat = b_Seat;
         Btime = btime;
         B_date = b_date;
         this.userID = userID;
+        this.tktKeyValue = tktKeyValue;
+    }
+
+    public String getTktKeyValue() {
+        return tktKeyValue;
     }
 
     public String getB_Seat() {
