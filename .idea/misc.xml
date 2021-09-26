@@ -3,29 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/LastZoo1/app/src/main/res/layout/activity_animal_feeding_details.xml" value="0.18611111111111112" />
+        <entry key="..\:/LastZoo1/app/src/main/res/layout/activity_tour_booking.xml" value="0.2" />
         <entry key="..\:/SLIIT/year 2 sem 2/MADD/newzoo2/app/src/main/res/layout/activity_animal_feeding_details.xml" value="0.17798913043478262" />
         <entry key="..\:/SLIIT/year 2 sem 2/MADD/newzoo2/app/src/main/res/layout/activity_animal_show_home.xml" value="0.17798913043478262" />
         <entry key="..\:/SLIIT/year 2 sem 2/MADD/newzoo2/app/src/main/res/layout/activity_bird_show_details.xml" value="0.17798913043478262" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_animal_feeding.xml" value="0.25416666666666665" />
         <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_animal_feeding_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_animal_feeding_view.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_bird_show.xml" value="0.25416666666666665" />
         <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_bird_show_details.xml" value="0.17753623188405798" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_forget_password.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_guided_tour_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_guided_view.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_registration.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_show_view.xml" value="0.24010416666666667" />
         <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_ticket_book_details.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_ticketbooking.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_tour_booking.xml" value="0.264" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_view_ticket_booking.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/item.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/item2.xml" value="0.25052083333333336" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/item3.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/item4.xml" value="0.25416666666666665" />
-        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/main_item.xml" value="0.25052083333333336" />
+        <entry key="..\:/project/New folder/MAD Last/app/src/main/res/layout/activity_tour_booking.xml" value="0.17753623188405798" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/border.xml" value="0.24027777777777778" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/d_btn_reg.xml" value="0.24027777777777778" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/drawable/d_input_bg.xml" value="0.24027777777777778" />
@@ -47,6 +33,9 @@
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_ticket_book_details.xml" value="0.1" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_ticketbooking.xml" value="0.2" />
         <entry key="..\:/project/New folder/ZooApp2/app/src/main/res/layout/activity_tour_booking.xml" value="0.2105978260869565" />
+        <entry key="..\:/sliit/2nd year/2 nd sem/LastZoo1/app/src/main/res/layout/activity_animal_feeding_details.xml" value="0.25052083333333336" />
+        <entry key="..\:/sliit/2nd year/2 nd sem/LastZoo1/app/src/main/res/layout/activity_bird_show.xml" value="0.25052083333333336" />
+        <entry key="..\:/sliit/2nd year/2 nd sem/LastZoo1/app/src/main/res/layout/activity_ticket_book_details.xml" value="0.25052083333333336" />
       </map>
     </option>
   </component>
@@ -59,7 +48,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.25416666666666665" />
+        <option name="scale" value="0.2" />
       </ProjectState>
     </option>
   </component>
