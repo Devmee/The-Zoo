@@ -31,9 +31,6 @@
             android:name=".TourBooking"
             android:exported="true" />
         <activity
-            android:name=".AnimalFeedingDetails"
-            android:exported="true" />
-        <activity
             android:name=".ForgetPassword"
             android:exported="true" />
         <activity
