@@ -17,6 +17,7 @@ public class feedingMod {
             this.age = age;
 
         }
+        public feedingMod(){}
 
          public String getUserID() {
         return userID;

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,11 +30,12 @@ public class GuidedView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guided_view);
 
-        recyclerView=(RecyclerView)findViewById(R.id.recyclerView2);
+        recyclerView=(RecyclerView)findViewById(R.id.guiderecyclerView2);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-        reff= FirebaseDatabase.getInstance().getReference("GuidedTour").child("GTour").child(userID);
+        reff= FirebaseDatabase.getInstance().getReference("GuidedTour").child("GTour").child(uid);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

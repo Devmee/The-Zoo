@@ -113,7 +113,7 @@ public class AquariumShow extends AppCompatActivity {
         }
 
 
-        AqShow B =new AqShow (id,AAqanimal,AAqtime,AAq_date,AAq_Seat,userID);
+        AqShow B =new AqShow (id,AAqanimal,AAq_Seat,AAqtime,AAq_date,userID);
 
 
 
