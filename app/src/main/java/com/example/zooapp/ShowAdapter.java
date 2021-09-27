@@ -108,15 +108,15 @@ public class ShowAdapter extends RecyclerView.Adapter<ShowAdapter.MyViewHolder> 
 
 
 
-                            ShowModel  showModel = new ShowModel( useID,tktKeyValue,Bseat,Bdate,Banimal,Btime,BBseat,BBdate,BBtime);
-                            DatabaseReference reff = FirebaseDatabase.getInstance().getReference("TicketBooking").child("TicketBookDetails").child(useID).child(String.valueOf(showModel.getTktKeyValue()));
+                            ShowModel  showModel = new ShowModel( tktKeyValue,Banimal,Bseat,Btime,Bdate,BBseat,BBtime,BBdate,useID);
+                            DatabaseReference reff = FirebaseDatabase.getInstance().getReference("AnimalShow").child("AquariumShow").child(useID).child(String.valueOf(showModel.getTktKeyValue()));
 
                             Task<Void> mTsk = reff.removeValue();
                             //Toast.makeText(context,"Remove Succesfully!",Toast.LENGTH_SHORT).show();
                             mTsk.addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-                                    context.startActivity(new Intent(context, ViewTicketBooking.class).putExtra("keyuserID", useID));
+                                    context.startActivity(new Intent(context, ShowView.class).putExtra("keyuserID", useID));
                                     Toast.makeText(context,"Remove Succesfully!",Toast.LENGTH_SHORT).show();
                                     //showToast("Deleted Success!");
                                 }

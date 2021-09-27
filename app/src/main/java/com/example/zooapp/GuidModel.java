@@ -14,6 +14,7 @@ public class GuidModel {
         this.tnation = tnation;
         this.userID = userID;
     }
+    public GuidModel(){}
 
     public String getTktKeyValue() {
         return tktKeyValue;

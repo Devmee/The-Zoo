@@ -32,7 +32,7 @@ public class ShowView extends AppCompatActivity {
         recyclerView =(RecyclerView)findViewById(R.id.ShowView);
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("BirdShow").child(userID);
+        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("AquariumShow").child(userID);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

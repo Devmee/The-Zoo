@@ -10,7 +10,7 @@ public class GtBook {
     private String userID;
     private  String tktKeyValue;
 
-    public GtBook(String dv_email, String tnation, String dv_Adult, String dv_Child, String dv_date, String userID, String tktKeyValue) {
+    public GtBook(String tktKeyValue,String dv_email, String tnation, String dv_Adult, String dv_Child, String dv_date, String userID) {
         Dv_email = dv_email;
         Tnation = tnation;
         Dv_Adult = dv_Adult;

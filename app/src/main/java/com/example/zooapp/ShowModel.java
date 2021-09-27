@@ -5,7 +5,7 @@ public class ShowModel {
     String aq_Seat,aq_date,aqanimal,aqtime,b_Seat,b_date,btime,userID;
     private String tktKeyValue;
 
-    public ShowModel(String aq_Seat, String aq_date, String aqanimal, String aqtime, String b_Seat, String b_date, String btime, String userID, String tktKeyValue) {
+    public ShowModel(String tktKeyValue,String aqanimal,String aq_Seat,String aqtime,String aq_date, String b_Seat,String btime, String b_date,  String userID) {
         this.aq_Seat = aq_Seat;
         this.aq_date = aq_date;
         this.aqanimal = aqanimal;
@@ -19,6 +19,7 @@ public class ShowModel {
 
 
     }
+    public ShowModel(){}
 
     public String getAq_Seat() {
         return aq_Seat;

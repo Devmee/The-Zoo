@@ -82,8 +82,8 @@ public class GuidAdapter extends RecyclerView.Adapter<GuidAdapter.MyViewHolder> 
             dv_date = itemView.findViewById(R.id.dwdate);
             dv_email = itemView.findViewById(R.id.dwemail);
             tnation = itemView.findViewById(R.id.dwnation);
-            userID = itemView.findViewById(R.id.userID);
-            orderID = itemView.findViewById(R.id.orderID_txt);
+            userID = itemView.findViewById(R.id.userIDDD);
+            orderID = itemView.findViewById(R.id.orderIDDD);
             deleteBtn = itemView.findViewById(R.id.deleteDw);
 
 
@@ -112,7 +112,7 @@ public class GuidAdapter extends RecyclerView.Adapter<GuidAdapter.MyViewHolder> 
 
 
 
-                            GuidModel  guidModel = new GuidModel( useID,tktKeyValue,typeD,DVadu,DVch,DVdate,DVemail);
+                            GuidModel  guidModel = new GuidModel( tktKeyValue,DVadu,DVch,DVdate,DVemail,typeD,useID);
                             DatabaseReference reff = FirebaseDatabase.getInstance().getReference("GuidedTour").child("GTour").child(useID).child(String.valueOf(guidModel.getTktKeyValue()));
 
                             Task<Void> mTsk = reff.removeValue();

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,7 +34,9 @@ public class AnimalFeedingView extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-        reff= FirebaseDatabase.getInstance().getReference("Feeding").child("Feed").child(userID);
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        System.out.println(userID);
+        reff= FirebaseDatabase.getInstance().getReference("Feeding").child("Feed").child(uid);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
