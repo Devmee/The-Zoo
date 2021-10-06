@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,47 +16,52 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ShowView extends AppCompatActivity {
+public class BirdShowVIew extends AppCompatActivity {
+
 
     RecyclerView recyclerView;
     DatabaseReference reff;
-    ShowAdapter showAdapter;
-    ArrayList<ShowModel>list;
+    ShowAdapter2 showAdapter2;
+    ArrayList<ShowModel2> list;
 
     String userID,email;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_view);
+        setContentView(R.layout.activity_bird_show_view);
 
-        recyclerView =(RecyclerView)findViewById(R.id.ShowView);
+        recyclerView =(RecyclerView)findViewById(R.id.BirdShowView);
         userID = getIntent().getStringExtra("keyuserID");
         email = getIntent().getStringExtra("keyEmail");
-        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("AquariumShow").child(userID);
+        reff= FirebaseDatabase.getInstance().getReference("AnimalShow").child("BirdShow").child(userID);
 
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list =new ArrayList<>();
-        showAdapter=new ShowAdapter(this,list);
-        recyclerView.setAdapter(showAdapter);
+        showAdapter2 =new ShowAdapter2(this,list);
+        recyclerView.setAdapter(showAdapter2);
 
         reff.addValueEventListener(new ValueEventListener() {
+            @SuppressLint("NotifyDataSetChanged")
+
+
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot: snapshot.getChildren()){
 
-                    ShowModel showModel = dataSnapshot.getValue(ShowModel.class);
-                    list.add(showModel);
+                    ShowModel2 showModel2 = dataSnapshot.getValue(ShowModel2.class);
+                    list.add(showModel2);
 
 
 
 
                 }
-                showAdapter.notifyDataSetChanged();
+                showAdapter2.notifyDataSetChanged();
 
             }
 
@@ -68,5 +73,6 @@ public class ShowView extends AppCompatActivity {
 
 
     }
+
 
 }

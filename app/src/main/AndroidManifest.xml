@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZooApp">
         <activity
+            android:name=".BirdShowVIew"
+            android:exported="true" />
+        <activity
             android:name=".GuidedView"
             android:exported="true" />
         <activity

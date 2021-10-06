@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class AnimalShowHome extends AppCompatActivity {
 
     Button AnimalB,BirdB;
+    TextView AqShowD1,BShowD1;
     String getmail,userID;
 
 
@@ -23,6 +24,8 @@ public class AnimalShowHome extends AppCompatActivity {
 
         AnimalB= findViewById(R.id.B_animalShow_btn);
         BirdB = findViewById(R.id.B_BirdShow_btn);
+        AqShowD1=findViewById(R.id.AqShowD);
+        BShowD1=findViewById(R.id.BShowD);
 
 
 
@@ -37,11 +40,27 @@ public class AnimalShowHome extends AppCompatActivity {
                 startActivity(new Intent(AnimalShowHome.this,AquariumShow.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
+        //go to the Aqshow  Show Details
+        AqShowD1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AnimalShowHome.this, ShowView.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
+            }
+        });
+
         //go to the bird Show
         BirdB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AnimalShowHome.this, BirdShow.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
+            }
+        });
+
+        //go to the Birdshow  Show Details
+        BShowD1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AnimalShowHome.this, BirdShowVIew.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
 
