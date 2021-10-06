@@ -92,6 +92,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             deleteBtn = itemView.findViewById(R.id.deleteDj);
 
+            //Delete
             deleteBtn.setOnClickListener(new View.OnClickListener() {
 
 

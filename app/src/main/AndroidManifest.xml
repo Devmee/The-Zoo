@@ -45,7 +45,6 @@
         <activity android:name=".AnimalShowHome" />
         <activity android:name=".LoginDetails" />
         <activity android:name=".Home" />
-        <activity android:name=".Bird_Show_Details" />
         <activity android:name=".BirdShow" />
         <activity android:name=".AquariumShow" />
         <activity android:name=".TicketBookDetails" />
