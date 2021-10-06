@@ -86,7 +86,7 @@ public class Home extends AppCompatActivity {
         PAS_Book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, ShowView.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
+                startActivity(new Intent(Home.this, AnimalShowHome.class).putExtra("keyuserID", userID).putExtra("keyEmail", getmail));
             }
         });
 

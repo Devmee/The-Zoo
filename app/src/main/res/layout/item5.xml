@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
-    android:id="@+id/itemHandle2"
+    android:id="@+id/item5"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
@@ -24,7 +24,7 @@
 
 
             <TextView
-                android:id="@+id/orderIDb"
+                android:id="@+id/orderIDb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -43,81 +43,35 @@
             android:background=" #00555555"
             android:orientation="horizontal"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="187dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="94dp"
-                android:padding="5dp"
-                android:text="@string/list_aniy"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/atype"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="type"
-                android:textColor="@color/black"
-                android:textSize="17dp"
-                android:textStyle="bold" />
 
-        </LinearLayout>
+
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="61dp"
+            android:layout_height="66dp"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="133dp"
-                android:padding="5dp"
-                android:text="@string/list_seat"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/Numseat1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="full"
-                android:textColor="@color/black"
-                android:textSize="17dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="160dp"
+                android:layout_width="158dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="120dp"
                 android:padding="5dp"
-                android:text="@string/list_time"
+                android:text="@string/list_seat2"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/fshowtime1"
+                android:id="@+id/Numseat22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
                 android:padding="5dp"
-                android:text="fulltktamount"
+                android:text="halfAmount"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 android:textStyle="bold" />
@@ -126,35 +80,57 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="56dp"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="147dp"
-                android:layout_height="58dp"
-                android:layout_marginEnd="96dp"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="70dp"
                 android:padding="5dp"
-                android:text="@string/list_sdate"
+                android:text="@string/list_time2"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/showdate1"
+                android:id="@+id/showtime22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:padding="5dp"
-                android:text="HalfTicket"
+                android:text="total"
                 android:textColor="@color/black"
                 android:textSize="17dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:orientation="horizontal">
 
+            <TextView
+                android:layout_width="122dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="152dp"
+                android:padding="5dp"
+                android:text="@string/list_sdate2"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/showdate22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
 
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -164,7 +140,7 @@
 
 
             <TextView
-                android:id="@+id/userIDb"
+                android:id="@+id/userIDb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -223,7 +199,7 @@
             android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/deleteShow"
+                android:id="@+id/deleteShow2"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
