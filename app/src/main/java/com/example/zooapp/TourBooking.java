@@ -108,20 +108,20 @@ public class TourBooking extends AppCompatActivity {
 
 
         if(TextUtils.isEmpty(Gtemail)){
-            Dv_email.setError("  Required!");
+            Dv_email.setError("At least one filed is Required!");
             return;
         }
         if(TextUtils.isEmpty(Gtadult)){
-            Dv_Adult.setError(" Required!");
+            Dv_Adult.setError("At least one filed is Required!");
             return;
         }
         if(TextUtils.isEmpty(Gtchild)){
-            Dv_Child.setError("Date Is Required!");
+            Dv_Child.setError("At least one filed is Required!");
             return;
         }
 
         if(TextUtils.isEmpty(Gtdate)){
-            Dv_date.setError("Date Is Required!");
+            Dv_date.setError("At least one filed is Required!");
             return;
         }
 
@@ -135,7 +135,7 @@ public class TourBooking extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"Book  Saved",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Successful!",Toast.LENGTH_SHORT).show();
 
                 }else{
 

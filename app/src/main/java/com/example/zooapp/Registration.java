@@ -66,7 +66,7 @@ public class Registration extends AppCompatActivity {
 
                 //form Validation
                 if(TextUtils.isEmpty(name)){
-                    rname.setError("Name is Required!");
+                    rname.setError("Username is Required!");
                     return;
                 }
                 if(TextUtils.isEmpty(email)){

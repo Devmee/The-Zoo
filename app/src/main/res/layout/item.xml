@@ -213,7 +213,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="122dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="152dp"
                 android:padding="5dp"

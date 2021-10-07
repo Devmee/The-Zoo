@@ -111,12 +111,12 @@ public class AnimalFeeding extends AppCompatActivity {
 
 
         if(TextUtils.isEmpty(fa_date)){
-            a_date.setError("  Required!");
+            a_date.setError("At least one filed is Required!");
             return;
         }
 
         if(TextUtils.isEmpty(fage)){
-            age.setError("Date Is Required!");
+            age.setError("At least one filed is Required!");
             return;
         }
 
@@ -133,7 +133,7 @@ public class AnimalFeeding extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"Book Saved",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Successful!",Toast.LENGTH_SHORT).show();
 
                 }else{
 

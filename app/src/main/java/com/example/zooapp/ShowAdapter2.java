@@ -81,7 +81,7 @@ public class ShowAdapter2 extends RecyclerView.Adapter<ShowAdapter2.MyViewHolder
             deleteBtn = itemView.findViewById(R.id.deleteShow2);
 
 
-
+            //Delete Bird Show
             deleteBtn.setOnClickListener(new View.OnClickListener() {
 
 
