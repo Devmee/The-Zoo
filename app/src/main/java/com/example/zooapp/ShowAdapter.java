@@ -84,7 +84,7 @@ public class ShowAdapter extends RecyclerView.Adapter<ShowAdapter.MyViewHolder> 
             deleteBtn = itemView.findViewById(R.id.deleteShow);
 
 
-
+            //Delete Aquarium Show
             deleteBtn.setOnClickListener(new View.OnClickListener() {
 
 

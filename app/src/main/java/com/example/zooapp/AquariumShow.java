@@ -103,12 +103,12 @@ public class AquariumShow extends AppCompatActivity {
 
 
         if(TextUtils.isEmpty(AAq_Seat)){
-            Aq_Seat.setError("  Required!");
+            Aq_Seat.setError(" At least one filed is Required!");
             return;
         }
 
         if(TextUtils.isEmpty(AAq_date)){
-            Aq_date.setError("Date Is Required!");
+            Aq_date.setError("At least one filed is Required!");
             return;
         }
 
@@ -123,7 +123,7 @@ public class AquariumShow extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"Book Saved",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Successful!",Toast.LENGTH_SHORT).show();
 
                 }else{
 

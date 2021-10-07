@@ -150,6 +150,7 @@ public class Ticketbooking extends AppCompatActivity {
         });
     }
 
+    //insert data
     private void insertS_Book() {
         String Snational = S_National.getSelectedItem().toString();
         String Sadult = S_Adult.getText().toString();
@@ -161,11 +162,11 @@ public class Ticketbooking extends AppCompatActivity {
 
         //form Validation
         if(TextUtils.isEmpty(Sadult)){
-            S_Adult.setError("  Required!");
+            S_Adult.setError("  At least one filed is Required!");
             return;
         }
         if(TextUtils.isEmpty(Schild)){
-            S_Child.setError(" Required!");
+            S_Child.setError(" At least one filed is Required!");
             return;
         }
         if(TextUtils.isEmpty(Sdate)){
@@ -219,7 +220,7 @@ public class Ticketbooking extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"Order Saved",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Book Saved",Toast.LENGTH_SHORT).show();
 
                 }else{
                    

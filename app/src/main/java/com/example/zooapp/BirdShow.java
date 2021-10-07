@@ -104,12 +104,12 @@ public class BirdShow extends AppCompatActivity {
         String id = reff.push().getKey();
 
         if(TextUtils.isEmpty(Bs_Seat)){
-            B_Seat.setError("  Required!");
+            B_Seat.setError(" At least one filed is Required!");
             return;
         }
 
         if(TextUtils.isEmpty(Bs_date)){
-            B_date.setError("Date Is Required!");
+            B_date.setError("At least one filed is Required!");
             return;
         }
 
@@ -125,7 +125,7 @@ public class BirdShow extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
 
                 if(task.isSuccessful()){
-                    Toast.makeText(getApplicationContext(),"Book Saved",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Successful!",Toast.LENGTH_SHORT).show();
 
                 }else{
 
